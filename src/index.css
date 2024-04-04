@@ -10,13 +10,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #8758ff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .App {
   text-align: center;
 }
@@ -25,11 +18,14 @@ body {
   h1 {
     @apply text-white mb-2 text-3xl
   }
+  body {
+    @apply bg-black/55 flex justify-center items-center
+  }
 }
 
 @layer components {
   .TodoWrapper{
-    @apply bg-[#1A1A40] mt-20 p-8 rounded
+    @apply bg-pink-300 mt-20 p-8 rounded
   }
 
   .TodoForm {
@@ -42,7 +38,7 @@ body {
   }
 
   .todo-btn {
-    @apply bg-[#8758ff] text-white border-none p-[0.55rem] cursor-pointer
+    @apply bg-pink-700 text-white border-none p-[0.55rem] cursor-pointer
   }
 
   .todo-input::placeholder {
@@ -51,17 +47,10 @@ body {
 
 
   .Todo {
-    @apply flex justify-between items-center bg-[#8758ff] text-white mb-4 rounded py-3 px-4
+    @apply flex justify-between items-center bg-pink-700 text-white mb-4 rounded py-3 px-4
   }
 
   .fa-trash {
     @apply ml-2
   }
 }
-
-
-
-
-
-
-
