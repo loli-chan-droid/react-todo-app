@@ -1,9 +1,12 @@
-import React, {useState} from 'react'
+import  React, {useState} from 'react'
 
-export const TodoForm = ({addTodo}) => {
+interface Props{
+  addTodo:(val:string) => void
+}
+export const TodoForm = ({addTodo}:Props) => {
     const [value, setValue] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e:React.FormEvent) => {
       // prevent default action
         e.preventDefault();
         if (value) {
